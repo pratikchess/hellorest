@@ -36,10 +36,10 @@
 					<plugin>
 						<artifactId>maven-war-plugin</artifactId>
 						<version>${version.war.plugin}</version>
-						<configuration>
+						<!-- <configuration>
 							<outputDirectory>webapps</outputDirectory>
 							<warName>ROOT</warName>
-						</configuration>
+						</configuration> -->
 					</plugin>
 				</plugins>
 			</build>
