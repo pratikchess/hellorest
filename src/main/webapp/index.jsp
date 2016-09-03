@@ -21,7 +21,7 @@ try {
     result = datasource.getConnection();
 %>
 
-<%= datasource.getConnection().getSchema() %>
+<%= datasource.getConnection() %>
 <%= result.isClosed() %>
 
 
