@@ -2,24 +2,13 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.prapps.app</groupId>
-	<artifactId>apps-parent</artifactId>
+	<artifactId>hello-parent</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>pom</packaging>
-
-	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.2.7.RELEASE</version>
-	</parent>
+	<packaging>war</packaging>
 
 	<properties>
 		<version.war.plugin>2.6</version.war.plugin>
 	</properties>
-
-	<modules>
-		<module>app-api</module>
-		<module>app-ear</module>
-	</modules>
 
 	<build>
 		<finalName>hellorest</finalName>
@@ -29,8 +18,9 @@
 				<artifactId>maven-war-plugin</artifactId>
 				<version>${version.war.plugin}</version>
 				<configuration>
+					<webappDirectory>src/main/webapp</webappDirectory>
 					<outputDirectory>target/</outputDirectory>
-					<warName>ROOT</warName>
+					<warName>hellorest</warName>
 				</configuration>
 			</plugin>
 		</plugins>
@@ -40,10 +30,12 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.6</version>
 		</dependency>
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
+			<version>3.1.0</version>
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
